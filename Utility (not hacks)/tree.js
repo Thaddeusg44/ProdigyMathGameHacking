@@ -18,7 +18,7 @@ var getTree = (root = window, branch = "window", path = []) => {
 	const elem = root[branch];
 	const prototypes = [elem, Object.keys(elem)];
 	while (prototypes[0] !== null) {
-		prototypes.unshift(Object.getPrototypeOf(prototypes[0]));
+		prototypes.unshift(object.getPrototypeOf(prototypes[0]));
 	}
 	const keys = prototypes
 		.filter(x => x !== null)
